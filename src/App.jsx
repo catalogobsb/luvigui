@@ -58,7 +58,7 @@ class App extends Component {
               setToken={token => this.setState({ token: token })}
             />
           ) : (
-            <Card>
+            <Card style={{minWidth: "400px", maxWidth: "94%"}}>
               <Button
                 onClick={() => {
                   this.setState({ token: "" });
@@ -84,7 +84,7 @@ class App extends Component {
                         <h3>{this.state.appSelecionado.name}</h3>
                         <a
                           style={{ marginLeft: "8px", fontSize: "14px" }}
-                          href="#"
+                          href={this.state.appSelecionado.dashboard_url}
                         >
                           {" "}
                           Ir para a dashboard

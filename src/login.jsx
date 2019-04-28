@@ -97,6 +97,7 @@ export default class Login extends Component {
                 />
                 <Input
                   onChange={this.onChange}
+                  type={"password"}
                   name="password"
                   value={password}
                   style={{ marginBottom: "6px" }}
