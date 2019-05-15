@@ -7,6 +7,8 @@ import CardContent from "@material-ui/core/CardContent";
 import { Button } from "@material-ui/core";
 import Dashboard from "./dashboard";
 import Login from "./login";
+import Relatorios from "./Relatorios/Relatorios";
+import Bloquear from "./Bloquear";
 
 const apps = [
   {
@@ -92,6 +94,8 @@ class App extends Component {
                       </div>
                     </div>
                     <Dashboard app={this.state.appSelecionado} />
+                    <Relatorios />
+                    <Bloquear />
                   </div>
                 ) : (
                   <div className="app-container">
@@ -100,7 +104,6 @@ class App extends Component {
                       <Button
                         onClick={() => {
                           this.setState({ appSelecionado: app });
-                          console.log(app);
                         }}
                         fullWidth
                         variant="contained"
